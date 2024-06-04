@@ -19,7 +19,7 @@ public class Hooks {
                 "--ignore-certificate-errors",
                 "--window-size=1280,800",
                 "--remote-allow-origins=*"
-//                            , "headless" //Aktifkan untuk menjalankan browser dibelakang
+//                            , "headless" //Aktifkan untuk menjalankan browser dibelakang layar
         );
         return options;
     }
