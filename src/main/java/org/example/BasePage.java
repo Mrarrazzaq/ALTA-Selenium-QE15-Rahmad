@@ -135,7 +135,7 @@ public class BasePage {
         actions.sendKeys(e, charKeyboard)
                 .perform();
     }
-
+    //select can be used for dropdown for sorting
     //tag must be select
     public void selectByVisibleText(WebElement e, String visibleText) {
         Select sort = new Select(e);

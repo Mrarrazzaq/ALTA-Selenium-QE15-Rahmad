@@ -14,7 +14,8 @@ import org.junit.runner.RunWith;
         plugin = {"pretty",
                 "html:target/site/cucumber-pretty.html",
                 "json:target/cucumber/cucumber.json"
-        }
+        },
+        tags = "@smoketest or @regression"
 )
 public class RunCukesTest {
 }
