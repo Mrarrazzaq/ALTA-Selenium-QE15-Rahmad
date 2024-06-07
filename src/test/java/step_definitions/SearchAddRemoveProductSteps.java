@@ -3,12 +3,15 @@ package step_definitions;
 import hooks.Hooks;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import org.example.pageObject.LoginPage;
 import org.example.pageObject.SearchAddRemoveProduct;
 import org.openqa.selenium.WebDriver;
+import org.junit.Assert;
 
 public class SearchAddRemoveProductSteps {
     private final WebDriver driver = Hooks.driver;
     SearchAddRemoveProduct searchAddRemoveProduct = new SearchAddRemoveProduct(driver);
+    LoginPage loginPages = new LoginPage(driver);
 
     @And("Veify that product Red Tsirt and Onsie are displayed")
     public void veifyThatProductRedTsirtAndOnsieAreDisplayed() {
@@ -40,10 +43,13 @@ public class SearchAddRemoveProductSteps {
         searchAddRemoveProduct.clickRemoveRedTShirt();
     }
 
-    @Then("Click continue shopping")
+    @And("Click continue shopping")
     public void clickContinueShopping() {
         searchAddRemoveProduct.clickContinueShopping();
     }
 
-
+    @Then("User should be directed to the dashboard page")
+    public void userShouldBeDirectedToTheDashboardPage() {
+        Assert.assertTrue(loginPages.verifyLabelProduct());
+    }
 }

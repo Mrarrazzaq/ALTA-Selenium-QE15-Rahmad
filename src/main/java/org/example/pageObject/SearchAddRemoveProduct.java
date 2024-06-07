@@ -66,4 +66,5 @@ public class SearchAddRemoveProduct extends BasePage {
         waitForElementClickable(btnContinueShopping);
         click(btnContinueShopping);
     }
+
 }

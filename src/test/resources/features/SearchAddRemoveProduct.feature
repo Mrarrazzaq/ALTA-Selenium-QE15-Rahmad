@@ -8,5 +8,6 @@ Feature: Search Add and Remove Product
     And Click add to chart product red tsirt
     And User open cart menu
     And Remove the red tsirt
-    Then Click continue shopping
+    And Click continue shopping
+    Then User should be directed to the dashboard page
 

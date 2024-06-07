@@ -11,22 +11,22 @@ import org.openqa.selenium.WebDriver;
 public class LoginSteps {
     private final WebDriver driver = Hooks.driver;
     LoginPage loginPage = new LoginPage(driver);
-    @Given("User open the web sauce demo")
-    public void userOpenTheWebSauceDemo() {
-        Assert.assertTrue(loginPage.verifyLoginPage());
-    }
-
-    @When("User input {string} as userName and {string} as password and click login")
-    public void userInputAsUserNameAndAsPasswordAndClickLogin(String username, String password) {
-        loginPage.inputFieldUserName(username);
-        loginPage.inputFieldPassword(password);
-        loginPage.clickButtonLogin();
-    }
-
-    @Then("User should be directed to the dashboard page")
-    public void userShouldBeDirectedToTheDashboardPage() {
-        Assert.assertTrue(loginPage.verifyLabelProduct());
-    }
+//    @Given("User open the web sauce demo")
+//    public void userOpenTheWebSauceDemo() {
+//        Assert.assertTrue(loginPage.verifyLoginPage());
+//    }
+//
+//    @When("User input {string} as userName and {string} as password and click login")
+//    public void userInputAsUserNameAndAsPasswordAndClickLogin(String username, String password) {
+//        loginPage.inputFieldUserName(username);
+//        loginPage.inputFieldPassword(password);
+//        loginPage.clickButtonLogin();
+//    }
+//
+//    @Then("User should be directed to the dashboard page")
+//    public void userShouldBeDirectedToTheDashboardPage() {
+//        Assert.assertTrue(loginPage.verifyLabelProduct());
+//    }
 
 
     @Given("User login with valid username {string} and password {string}")
