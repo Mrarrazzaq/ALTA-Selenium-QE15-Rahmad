@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
                 "html:target/site/cucumber-pretty.html",
                 "json:target/cucumber/cucumber.json"
         },
-        tags = "@smoketest or @regression"
+        tags = "@smoketest or @regression or @tugas"
 )
 public class RunCukesTest {
 }

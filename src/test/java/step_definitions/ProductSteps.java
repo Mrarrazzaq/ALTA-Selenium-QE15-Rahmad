@@ -11,6 +11,7 @@ public class ProductSteps {
     private final WebDriver driver = Hooks.driver;
     ProductPage productPage = new ProductPage(driver);
 
+
     @Then("On the product page verify the saucelabs backpack is displayed")
     public void onTheProductPageVerifyTheSaucelabsBackpackIsDisplayed() {
         Assert.assertTrue(productPage.verifyTitleProductSauceLabsBackpack());
